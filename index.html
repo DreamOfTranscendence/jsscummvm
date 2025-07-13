@@ -5,25 +5,19 @@
 <body>
 
   <h1>JS ScummVM</h1>
-  <h2>Monkey Island</h2>
 
-  <canvas id="jsscummvm" width="320" height="200"></canvas>
+  <canvas id="jsscummvm" width="640" height="400"></canvas>
   <div id="console"></div>
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-  <script type="text/javascript" src="src/jsscumm.js"></script>
-  <script type="text/javascript" src="src/system.js"></script>
-  <script type="text/javascript" src="src/stream.js"></script>
-  <script type="text/javascript" src="src/engines/scumm.js"></script>
-  <script type="text/javascript" src="src/engines/resources.js"></script>
-  <script type="text/javascript" src="src/engines/script.js"></script>
-  <script type="text/javascript" src="src/engines/room.js"></script>
-  <script type="text/javascript" src="src/engines/gfx.js"></script>
-  <script type="text/javascript" src="src/engines/palette.js"></script>
-  <script type="text/javascript" src="src/engines/camera.js"></script>
-  <script type="text/javascript" src="src/engines/costume.js"></script>
+  <script type="text/javascript" src="src/jsscumm_all.js"></script>
+  <!--
+  I merged all the scripts into 1. sorry about that, I needed to be able to jump from function to function and variable to see everything and the functions that reference them all at once. 
+
+  Also, check out "https://github.com/BLooperZ/nutcracker", I may use some of their code as well for the scumm script version(s) I'm trying to get this to.
+  -->
   <script type="text/javascript">
-    ScummVM.load("monkey1");
+    ScummVM.load("monkey1"); //might make html drop down list of games later, look into possibly loading game files directly from the internet archive.org.
   </script>
 </body>
 </html>
