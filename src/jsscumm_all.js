@@ -5246,7 +5246,7 @@ function assert(condition) {
 
  
 // S P L U N K rnd00437_dot_333333
- // E N D  of original work by https://github.com/Emupedia (emulator jsscummvm)
+ // E N D  of original work by https://github.com/mutle/ (emulator jsscummvm)
 
  // B E G I N  custom "myscript_jsscumm_alt_loader.js"
 
