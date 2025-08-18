@@ -26,7 +26,7 @@ se1f.js_namespace=function js_namespace(ffns,nsn){ //useage var namespace_name =
  var d=document,cE="createElement",aC="appendChild",f1,fx="for(let op in self.parent) if(!self[op])self[op]=self.parent[op]; //outer scope\r\nself.js_all_namespaces={}; se1f.js_namespace="+se1f.js_namespace.toString()+";\r\n";
  if(js_all_namespaces[nsn]){ f1=js_all_namespaces[nsn]; fx="";
  }else{ f1=d[cE]("iframe");  d.body[aC](f1);
- f1.setAttribute("data-namespace",nsn||"true"); }
+ f1.setAttribute("data-namespace",nsn||"true"); js_all_namespaces[nsn]=f1; }
 
  var jse=d[cE]("script"),nss=ffns.toString();
  jse.innerHTML=fx+nss.substring(nss.indexOf("{")+1,nss.lastIndexOf("}"));
