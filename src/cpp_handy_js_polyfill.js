@@ -23,7 +23,7 @@ se1f.h_include=function h_include(patha,basepath){	//patha is array of js files 
 //convert the code blocks of the namespace in c++ to a non-called function, put as argument in js_namespace, set a variable with namespace name equal to js_namespace's return
 self.js_all_namespaces={};
 se1f.js_namespace=function js_namespace(ffns,nsn){ //useage var namespace_name = js_namespace(non_called_function_filled_with_namespace_code,namespace_name);
- var d=document,cE="createElement",aC="appendChild",f1,fx="for(let op in self.parent) if(!self[op])self[op]=self.parent[op]; //outer scope\r\nself.js_all_namespaces={}; se1f.js_namespace="+se1f.js_namespace.toString()+";\r\n";
+ var d=document,cE="createElement",aC="appendChild",f1,fx="self.js_all_namespaces={}; se1f.js_namespace="+se1f.js_namespace.toString()+";//end namespace pollyfill setup \r\nfor(let op in self.parent) if(!self[op])self[op]=self.parent[op]; //outer scope\r\n";
  if(js_all_namespaces[nsn]){ f1=js_all_namespaces[nsn]; fx="";
  }else{ f1=d[cE]("iframe");  d.body[aC](f1);
  f1.setAttribute("data-namespace",nsn||"true"); js_all_namespaces[nsn]=f1; }
