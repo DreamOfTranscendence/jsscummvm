@@ -1,5 +1,12 @@
 var se1f=this.self||this.window||this.global||this;
 
+(function StringCppPolyFill(){
+var oString=se1f.String;
+se1f.String=function String(o){ if(o.constructor==Uint8Array){ let rs="",i=0,L=o.length; while(i!=L){rs+=String.fromCharCode(o[i]);i++;}; }else return oString(o); };
+    
+String.prototype=oString.prototype;
+String.prototype.constructor=String;
+
 String.prototype.format = function () {
     var args = arguments;
   //need to add support for % sign format specifier
@@ -10,6 +17,7 @@ String.prototype.format = function () {
     });
 };
 
+})();
 
 se1f.h_include=function h_include(patha,basepath){	//patha is array of js files to include	
  //code to validate path (check a manually pre-filled-out include path list table 1st, longest paths 2nd, then if return invalid, delete 1 slash "/" at a time from the baseURL path untill it gets down to the baseURL domain name
